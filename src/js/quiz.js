@@ -2,6 +2,7 @@
 
 (function () {
   const STATE_KEY = "sbti_quiz_v1";
+  const RESULT_SNAPSHOT_KEY = "sbti_last_result";
 
   const questionsEl = document.getElementById("quiz-questions");
   const dimensionsEl = document.getElementById("quiz-dimensions");
@@ -14,8 +15,8 @@
     types: JSON.parse(typesEl.textContent)
   };
 
-  // Main flow: non-hidden questions only. Hidden probe questions surface
-  // based on trigger counters (future extension).
+  // Main flow: non-hidden questions. Hidden probe questions surface via
+  // trigger counters (future extension).
   const mainQuestions = data.questions.filter(q => !q.hidden);
 
   const rootEl = document.getElementById("quiz-root");
@@ -23,13 +24,6 @@
   const questionEl = document.getElementById("quiz-question");
   const optionsEl = document.getElementById("quiz-options");
   const backEl = document.getElementById("quiz-back");
-  const resultEl = document.getElementById("quiz-result");
-  const resultCodeEl = document.getElementById("result-type-code");
-  const resultNameEl = document.getElementById("result-type-name");
-  const resultTaglineEl = document.getElementById("result-tagline");
-  const resultMatchEl = document.getElementById("result-match-rate");
-  const resultNoteEl = document.getElementById("result-note");
-  const retryEl = document.getElementById("result-retry");
 
   let state = loadState() || { answers: [], currentIndex: 0 };
 
@@ -48,24 +42,15 @@
     } catch (_) {}
   }
 
-  function clearState() {
-    try {
-      localStorage.removeItem(STATE_KEY);
-    } catch (_) {}
-  }
-
   function render() {
     if (state.currentIndex >= mainQuestions.length) {
-      renderResult();
+      completeAndRedirect();
       return;
     }
     renderQuestion();
   }
 
   function renderQuestion() {
-    rootEl.hidden = false;
-    resultEl.hidden = true;
-
     const q = mainQuestions[state.currentIndex];
     const total = mainQuestions.length;
     progressEl.textContent = `${state.currentIndex + 1} / ${total}`;
@@ -100,25 +85,30 @@
     render();
   }
 
-  function renderResult() {
-    rootEl.hidden = true;
-    resultEl.hidden = false;
-
+  function completeAndRedirect() {
     const result = window.SBTI.score(state.answers, data);
     const type = data.types.find(t => t.code === result.typeCode);
 
-    resultCodeEl.textContent = result.typeCode || "—";
-    resultNameEl.textContent = type ? type.nameKo : "";
-    resultTaglineEl.textContent = type ? type.tagline : "";
-    resultMatchEl.textContent = `매칭률 ${Math.round(result.matchRate * 100)}%`;
-
-    if (result.hiddenTriggered) {
-      resultNoteEl.textContent = "히든 유형에 걸렸어요.";
-    } else if (result.isFallback) {
-      resultNoteEl.textContent = "어떤 유형과도 확실히 맞지 않는 희귀 프로필이에요.";
-    } else {
-      resultNoteEl.textContent = "";
+    if (!type || !type.slug) {
+      console.error("SBTI: cannot resolve result type slug", result);
+      return;
     }
+
+    // Stash a snapshot for the result page to enhance UX (match rate, etc.)
+    try {
+      sessionStorage.setItem(
+        RESULT_SNAPSHOT_KEY,
+        JSON.stringify({
+          typeCode: result.typeCode,
+          matchRate: result.matchRate,
+          isFallback: result.isFallback,
+          hiddenTriggered: result.hiddenTriggered,
+          triggers: result.triggers
+        })
+      );
+    } catch (_) {}
+
+    window.location.href = `/result/${type.slug}/`;
   }
 
   function goBack() {
@@ -129,14 +119,6 @@
     }
   }
 
-  function retry() {
-    clearState();
-    state = { answers: [], currentIndex: 0 };
-    render();
-  }
-
   backEl.addEventListener("click", goBack);
-  retryEl.addEventListener("click", retry);
-
   render();
 })();

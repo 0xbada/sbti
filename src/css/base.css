@@ -35,18 +35,28 @@ p {
   margin: 0 0 1rem;
 }
 
+.cta,
 .home-cta {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.85rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   background: #111111;
   color: #ffffff;
   text-decoration: none;
+  border: none;
   border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
   font-weight: 600;
-  transition: background 0.15s ease;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.08s ease;
 }
 
+.cta:hover,
 .home-cta:hover {
   background: #2a2a2a;
+}
+
+.cta:active {
+  transform: scale(0.98);
 }
