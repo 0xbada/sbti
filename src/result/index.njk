@@ -14,7 +14,15 @@ eleventyComputed:
   ogImage: "/img/types/{{ type.code }}.jpg"
 ---
 
-<article class="result-page">
+<article class="result-page" data-type-code="{{ type.code }}">
+  <aside class="result-banner" id="result-banner" hidden aria-label="당신의 테스트 결과">
+    <div class="result-banner-row">
+      <span class="result-banner-label">당신의 결과</span>
+      <span class="result-banner-match" id="banner-match-rate"></span>
+    </div>
+    <p class="result-banner-note" id="banner-note"></p>
+  </aside>
+
   <header class="result-header">
     <div class="result-code">{{ type.code }}</div>
     <p class="result-name">{{ type.nameKo }}</p>
@@ -65,13 +73,4 @@ eleventyComputed:
   <p class="result-disclaimer">엔터테인먼트 목적의 패러디 테스트입니다. 임상 심리 도구가 아닙니다.</p>
 </article>
 
-<script>
-  (function () {
-    var btn = document.getElementById("result-retry-btn");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      try { localStorage.removeItem("sbti_quiz_v1"); } catch (_) {}
-      location.href = "/quiz/";
-    });
-  })();
-</script>
+<script src="/js/result.js"></script>
