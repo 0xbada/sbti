@@ -1,0 +1,144 @@
+{
+  "models": [
+    {
+      "code": "SELF",
+      "nameKo": "자아",
+      "description": "자기 자신에 대한 인식과 통제 욕구",
+      "axes": [
+        {
+          "code": "SELF_AWARE",
+          "nameKo": "자기인식",
+          "description": "자기 강약점을 얼마나 분석하는가",
+          "lowLabel": "무관심",
+          "highLabel": "과몰입"
+        },
+        {
+          "code": "SELF_ESTEEM",
+          "nameKo": "자존감",
+          "description": "자기 긍정·부정의 정도",
+          "lowLabel": "위축",
+          "highLabel": "확고"
+        },
+        {
+          "code": "SELF_CONTROL",
+          "nameKo": "통제욕구",
+          "description": "환경·상황을 장악하려는 의지",
+          "lowLabel": "방관",
+          "highLabel": "장악"
+        }
+      ]
+    },
+    {
+      "code": "EMOTION",
+      "nameKo": "감정",
+      "description": "감정의 흐름과 타인에 대한 공감",
+      "axes": [
+        {
+          "code": "EMO_EXPR",
+          "nameKo": "감정표현",
+          "description": "감정을 외부에 드러내는 정도",
+          "lowLabel": "삼킴",
+          "highLabel": "드러냄"
+        },
+        {
+          "code": "EMO_STAB",
+          "nameKo": "정서안정",
+          "description": "기분 변동 폭과 회복력",
+          "lowLabel": "불안정",
+          "highLabel": "안정"
+        },
+        {
+          "code": "EMO_EMPATHY",
+          "nameKo": "공감력",
+          "description": "타인의 감정을 받아들이는 정도",
+          "lowLabel": "무감각",
+          "highLabel": "과몰입"
+        }
+      ]
+    },
+    {
+      "code": "ATTITUDE",
+      "nameKo": "태도",
+      "description": "세상과 자기 삶을 바라보는 관점",
+      "axes": [
+        {
+          "code": "ATT_OPTIM",
+          "nameKo": "낙관성",
+          "description": "상황을 긍정·부정으로 보는 기울기",
+          "lowLabel": "비관",
+          "highLabel": "낙관"
+        },
+        {
+          "code": "ATT_CYNIC",
+          "nameKo": "냉소",
+          "description": "세상 이면을 의심하는 정도",
+          "lowLabel": "순수",
+          "highLabel": "냉소"
+        },
+        {
+          "code": "ATT_REAL",
+          "nameKo": "현실감각",
+          "description": "이상 vs 현실 중 어디에 더 발을 딛는가",
+          "lowLabel": "몽상",
+          "highLabel": "현실주의"
+        }
+      ]
+    },
+    {
+      "code": "ACTION",
+      "nameKo": "행동",
+      "description": "실행 의지와 도전 성향",
+      "axes": [
+        {
+          "code": "ACT_DRIVE",
+          "nameKo": "추진력",
+          "description": "일을 밀고 나가는 힘",
+          "lowLabel": "정체",
+          "highLabel": "폭주"
+        },
+        {
+          "code": "ACT_DILIG",
+          "nameKo": "근면성",
+          "description": "지속적으로 노력을 쌓는 정도",
+          "lowLabel": "태만",
+          "highLabel": "성실"
+        },
+        {
+          "code": "ACT_RISK",
+          "nameKo": "모험성",
+          "description": "익숙한 길과 새로운 길 중 어느 쪽을 택하는가",
+          "lowLabel": "회피",
+          "highLabel": "도전"
+        }
+      ]
+    },
+    {
+      "code": "SOCIAL",
+      "nameKo": "사교",
+      "description": "타인과 관계 맺는 방식",
+      "axes": [
+        {
+          "code": "SOC_EXT",
+          "nameKo": "외향성",
+          "description": "사회적 상호작용에서 얻는 에너지",
+          "lowLabel": "혼자",
+          "highLabel": "무리"
+        },
+        {
+          "code": "SOC_AGREE",
+          "nameKo": "관계지향",
+          "description": "자기 중심 vs 타인 중심",
+          "lowLabel": "자기",
+          "highLabel": "타인"
+        },
+        {
+          "code": "SOC_CONFL",
+          "nameKo": "갈등회피",
+          "description": "불편한 상황을 직면하는가, 피하는가",
+          "lowLabel": "직면",
+          "highLabel": "회피"
+        }
+      ]
+    }
+  ]
+}
