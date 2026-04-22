@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "SBTI 테스트" }}</title>
+  <meta name="description" content="{{ description or "MBTI 패러디 성격 테스트 — SBTI" }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sbti.funhada.xyz{{ page.url }}">
+  <meta property="og:title" content="{{ ogTitle or title or "SBTI 테스트" }}">
+  <meta property="og:description" content="{{ ogDescription or description or "MBTI 패러디 성격 테스트 — SBTI" }}">
+  <meta property="og:image" content="https://sbti.funhada.xyz{{ ogImage or '/img/og-default.jpg' }}">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="SBTI">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ ogTitle or title or "SBTI 테스트" }}">
+  <meta name="twitter:description" content="{{ ogDescription or description or "MBTI 패러디 성격 테스트 — SBTI" }}">
+  <meta name="twitter:image" content="https://sbti.funhada.xyz{{ ogImage or '/img/og-default.jpg' }}">
+
+  <link rel="stylesheet" href="/css/base.css">
+  {% if pageCss %}<link rel="stylesheet" href="/css/{{ pageCss }}.css">{% endif %}
+</head>
+<body>
+  <main>
+    {{ content | safe }}
+  </main>
+  {% if pageJs %}<script src="/js/{{ pageJs }}.js"></script>{% endif %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "sbti",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SBTI — MBTI 패러디 성격 테스트 한국어 독립 사이트",
+  "homepage": "https://sbti.funhada.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xbada/sbti.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
