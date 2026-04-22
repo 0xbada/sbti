@@ -34,3 +34,19 @@ h1 {
 p {
   margin: 0 0 1rem;
 }
+
+.home-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 1.5rem;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.home-cta:hover {
+  background: #2a2a2a;
+}

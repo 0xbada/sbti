@@ -1,0 +1,29 @@
+---
+layout: layout.njk
+title: SBTI 테스트 진행 — 30문항으로 진짜 당신 찾기
+description: 너무 고민하지 말고 직감으로. 중간에 나가도 이어서 할 수 있어요.
+pageCss: quiz
+---
+
+<script id="quiz-questions" type="application/json">{{ questions | dump | safe }}</script>
+<script id="quiz-dimensions" type="application/json">{{ dimensions | dump | safe }}</script>
+<script id="quiz-types" type="application/json">{{ types | dump | safe }}</script>
+
+<section class="quiz-container" id="quiz-root">
+  <div class="quiz-progress" id="quiz-progress" aria-live="polite"></div>
+  <div class="quiz-question" id="quiz-question"></div>
+  <div class="quiz-options" id="quiz-options" role="radiogroup"></div>
+  <button class="quiz-back" id="quiz-back" type="button" hidden>← 이전</button>
+</section>
+
+<section class="quiz-result" id="quiz-result" hidden aria-live="polite">
+  <div class="result-type-code" id="result-type-code"></div>
+  <p class="result-type-name" id="result-type-name"></p>
+  <p class="result-tagline" id="result-tagline"></p>
+  <p class="result-match-rate" id="result-match-rate"></p>
+  <p class="result-note" id="result-note"></p>
+  <button class="quiz-cta" id="result-retry" type="button">다시 하기</button>
+</section>
+
+<script src="/js/scoring.js"></script>
+<script src="/js/quiz.js"></script>
