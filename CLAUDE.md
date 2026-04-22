@@ -117,11 +117,13 @@ permalink: "/result/{{ type.code }}/"
 
 ## 신규 문항·유형 추가 워크플로우
 
-1. `src/_data/questions.json`에 문항 추가 — `{id, text, dimension, options: [{text, weight}]}`
-2. `src/_data/types.json`에 유형 추가 — `{code, nameKo, tagline, dimensionProfile, thumbnailPath}`
-3. `src/img/types/{code}.jpg` 썸네일 추가 (1200×630, OG용)
-4. 빌드 검증: `npx @11ty/eleventy --quiet` — 27개 결과 페이지 모두 생성되는지 확인
-5. `src/js/scoring.js` 유닛 테스트: 대표 답변 세트 → 기대 유형 매핑 스냅샷
+1. `src/_data/questions.json`에 문항 추가 — `{id, text, hidden?, options: [{label, text, scores, triggers?}]}`
+2. `src/_data/types.json`에 유형 추가 — `{code, slug, nameKo, tagline, description, rarity, hidden, dimensionProfile}`
+3. `src/img/types/{code}.jpg` OG 카드 (1200×630)
+   - **자동 생성**: `node scripts/generate-og-cards.js` — types.json 읽어 placeholder JPG를 6개 유형 전부 재생성. 실제 디자인 JPG로 교체 전 임시 방패.
+   - 요구사항: ImageMagick(`brew install imagemagick`) + 시스템 폰트 `AppleSDGothicNeo.ttc` (macOS 기본)
+4. 빌드 검증: `npx @11ty/eleventy --quiet` — 결과 페이지 수가 types.json 배열 길이와 일치하는지 확인
+5. 스코어링 회귀: `npm test` — 12개 스냅샷 테스트 통과 확인
 
 ## 법적 고려사항
 
