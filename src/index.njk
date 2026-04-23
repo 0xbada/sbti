@@ -24,7 +24,7 @@ pageCss: home
 <section class="how">
   <h2>이렇게 작동해요</h2>
   <ol class="how-steps">
-    <li><strong>30개 질문</strong>에 L(낮음) · M(중간) · H(높음) 중 하나를 고른다. 답변은 자동으로 다음 문항으로 넘어가고, 뒤로 가기도 된다.</li>
+    <li><strong>30개 질문</strong>마다 제시된 <strong>3개의 문장</strong> 중 <strong>나를 가장 잘 표현하는 하나</strong>를 고른다. 답변은 자동으로 다음 문항으로 넘어가고, 뒤로 가기도 된다.</li>
     <li>답변이 <strong>15개 차원</strong>(자아·감정·태도·행동·사교 × 3축)의 벡터로 변환된다. 중도 이탈해도 같은 브라우저로 돌아오면 이어서 풀 수 있다.</li>
     <li>15차원 벡터가 <strong>27개 유형 프로필</strong> 중 가장 가까운 하나에 매칭된다. 어디와도 60% 이상 일치하지 않으면 분류 불가 유형 <strong>HHHH</strong>로 넘어간다.</li>
     <li>결과 페이지에서 <strong>당신의 유형과 매칭률</strong>, 15차원 그래프를 본다. 카카오톡·링크로 공유해 친구들 유형과 비교할 수 있다.</li>
@@ -53,8 +53,8 @@ pageCss: home
 </section>
 
 <section class="types-preview">
-  <h2>27가지 유형, 일부만 먼저 공개</h2>
-  <p class="types-lede">지금 공개된 샘플 유형들. 전체 27유형은 테스트 완료 후 결과 페이지에서 확인할 수 있다.</p>
+  <h2>27가지 유형, 미리 훑어보기</h2>
+  <p class="types-lede">유형 카드를 먼저 둘러봐도 좋다. 히든 유형 하나는 테스트에서 직접 만나봐야 만날 수 있다.</p>
   <div class="type-cards">
     {% for type in types %}
       {% if not type.hidden %}
@@ -112,7 +112,7 @@ pageCss: home
   </details>
 </section>
 
-<p class="disclaimer">본 테스트는 엔터테인먼트 목적의 패러디로, 임상 심리 도구가 아닙니다. 결과는 당신의 실제 성격·인격을 판단하지 않습니다.</p>
+<p class="disclaimer">본 테스트는 엔터테인먼트 목적의 패러디고, 임상 심리 도구가 아니다. 결과는 당신의 실제 성격·인격을 판단하지 않는다.</p>
 
 <script type="application/ld+json">
 {

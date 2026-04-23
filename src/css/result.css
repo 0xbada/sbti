@@ -289,14 +289,27 @@ main {
 }
 
 .result-link {
-  color: var(--result-muted);
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 1.75rem;
+  background: transparent;
+  color: var(--result-accent);
   text-decoration: none;
-  font-size: 0.95rem;
+  border: 1.5px solid var(--result-accent);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
 }
 
 .result-link:hover {
-  color: var(--result-accent);
-  text-decoration: underline;
+  background: var(--result-accent);
+  color: #ffffff;
+}
+
+.result-link:active {
+  transform: scale(0.98);
 }
 
 .result-disclaimer {
