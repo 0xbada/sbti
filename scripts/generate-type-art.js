@@ -63,7 +63,7 @@ const VISUAL_METAPHORS = {
   // 직설 팩폭
   FUCK: "a stylized figure with speed lines and a burst symbol above their head, mouth open mid-shout, steam coming from ears, cartoon-like fury but minimal, one dominant exclamation shape",
   SHIT: "a tired figure at a keyboard with a spreadsheet icon on the screen, a small grumble cloud above their head, but fingers still typing, a completed checkmark floating nearby",
-  POOR: "a focused minimalist figure with a laser beam of light concentrating on a single small coin or goal icon, empty wallet pushed aside, rest of scene is dim and stripped bare",
+  POOR: "a minimalist figure reaching toward a glowing gold coin in front of them, surrounded on the floor by clearly visible crossed-out shopping items (bags, phone, coffee cup, shoes), flat vector illustration, consistent solid warm background covering entire image, disciplined focus on a single goal",
 
   // 자조 루저
   "ATM-er": "a hand pulling a credit card out of a leaking wallet, coins and bills floating away toward other unseen people, a weary shrug posture",
@@ -86,7 +86,7 @@ const VISUAL_METAPHORS = {
   // 사색 관찰
   "THIN-K": "a figure sitting with multiple thought bubbles around their head showing different branching options, a stopwatch nearby, a decision arrow frozen mid-motion",
   "JOKE-R": "a figure on a small stage wearing a smiling clown mask, mask held slightly ajar revealing a melancholy expression underneath, empty spotlight audience seats",
-  OJBK: "a figure seated like a calm emperor on a simple throne, one hand lazily gesturing 'whatever', multiple options (food, drink, books) hovering around but blurred and unchosen",
+  OJBK: "a calm seated figure on a simple chair, one hand lazily waving dismissively, multiple floating ghostly options around them (meals, books, phones) shown as faded transparent shapes, serene imperial detachment, absolutely no text or letters or captions in the image",
   FAKE: "a figure with multiple different masks floating around their face — smiling, serious, shy — the mask in front changing style, the figure's actual face obscured in shadow behind",
   "WOC!": "a figure with exaggerated wide-eyed surprised expression and one hand dramatically raised, but next to them a small second figure (same person) sitting calmly with a cup of tea",
   "Dior-s": "a figure lying on a couch turned away from a window showing a busy city outside, a cat resting on the figure's stomach, soft indoor lighting, low energy atmosphere",
@@ -94,9 +94,9 @@ const VISUAL_METAPHORS = {
   // 기존 6 (special palette handling via FAMILY_MAP)
   DEAD: "a figure lying face-down on a desk with coffee mug tipped over, a small 'Z' floating above, computer screen showing a blank document, overall drained atmosphere",
   MALO: "a figure at an office desk holding a phone horizontally watching something, a second monitor with a boring spreadsheet, stealth posture",
-  MONK: "a figure sitting cross-legged on a mountain peak in lotus meditation pose, single cloud drifting by, calm simplicity, all distractions removed",
+  MONK: "a serene minimalist figure in simple robes sitting cross-legged in lotus meditation pose, eyes peacefully closed, a single bamboo stem beside them, soft morning mist in the background, zen temple aesthetic, calm simplicity, traditional Asian meditation imagery, no text or code or letters whatsoever",
   CTRL: "a figure at a control panel with multiple dials and a chess board beside them, hand adjusting a central knob precisely, focused gaze, everything in perfect alignment",
-  HHHH: "four smiling yellow emoji-like faces arranged in a grid, each slightly different expression, confused question mark floating in the center, chaotic but friendly",
+  HHHH: "a cheerful cartoon character with a warm smile and hands playfully raised in a shrug, colorful question marks and sparkles floating around them, optimistic friendly energy, bright playful atmosphere",
   DRUNK: "a figure leaning on a bar counter with a single tipped wine glass, soft warm evening light, slightly blurry background implying buzz, phone in hand about to send a text"
 };
 
