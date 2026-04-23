@@ -4,21 +4,9 @@
     "text": "회의 중에 내 의견이 무시당했다. 속으로 드는 생각은?",
     "hidden": false,
     "options": [
-      {
-        "label": "L",
-        "text": "내가 뭘 놓쳤나 싶어 되짚어본다",
-        "scores": { "SELF_AWARE": 0.8, "ATT_CYNIC": 0.2 }
-      },
-      {
-        "label": "M",
-        "text": "그럴 수도 있지 하고 넘긴다",
-        "scores": { "SELF_AWARE": 0.5, "ATT_CYNIC": 0.5 }
-      },
-      {
-        "label": "H",
-        "text": "원래 말해봐야 안 듣는 사람들이다",
-        "scores": { "SELF_AWARE": 0.3, "ATT_CYNIC": 0.9 }
-      }
+      { "label": "L", "text": "내가 뭘 놓쳤나 싶어 되짚어본다", "scores": { "SELF_AWARE": 0.8, "ATT_CYNIC": 0.2 } },
+      { "label": "M", "text": "그럴 수도 있지 하고 넘긴다", "scores": { "SELF_AWARE": 0.5, "ATT_CYNIC": 0.5 } },
+      { "label": "H", "text": "원래 말해봐야 안 듣는 사람들이다", "scores": { "SELF_AWARE": 0.3, "ATT_CYNIC": 0.9 } }
     ]
   },
   {
@@ -26,21 +14,9 @@
     "text": "주말에 친구가 갑자기 지금 놀자고 한다",
     "hidden": false,
     "options": [
-      {
-        "label": "L",
-        "text": "귀찮다. 침대가 최고",
-        "scores": { "ACT_DRIVE": 0.1, "SOC_EXT": 0.1 }
-      },
-      {
-        "label": "M",
-        "text": "뭐 하러 가는지 보고 결정한다",
-        "scores": { "ACT_DRIVE": 0.5, "SOC_EXT": 0.5 }
-      },
-      {
-        "label": "H",
-        "text": "옷만 대충 걸치고 바로 나간다",
-        "scores": { "ACT_DRIVE": 0.9, "SOC_EXT": 0.9 }
-      }
+      { "label": "L", "text": "귀찮다. 침대가 최고", "scores": { "ACT_DRIVE": 0.1, "SOC_EXT": 0.1 } },
+      { "label": "M", "text": "뭐 하러 가는지 보고 결정한다", "scores": { "ACT_DRIVE": 0.5, "SOC_EXT": 0.5 } },
+      { "label": "H", "text": "옷만 대충 걸치고 바로 나간다", "scores": { "ACT_DRIVE": 0.9, "SOC_EXT": 0.9 } }
     ]
   },
   {
@@ -48,22 +24,279 @@
     "text": "회식에서 '딱 한 잔만'이라는 말을 들었다",
     "hidden": false,
     "options": [
-      {
-        "label": "L",
-        "text": "고민 없이 거절한다",
-        "scores": { "SELF_CONTROL": 0.9, "SOC_CONFL": 0.1 }
-      },
-      {
-        "label": "M",
-        "text": "분위기 봐서 한 잔만 받는다",
-        "scores": { "SELF_CONTROL": 0.5, "SOC_CONFL": 0.5 }
-      },
-      {
-        "label": "H",
-        "text": "그 '한 잔'이 결국 열 잔이 된다",
-        "scores": { "SELF_CONTROL": 0.1, "SOC_CONFL": 0.8 },
-        "triggers": { "DRUNK": 1 }
-      }
+      { "label": "L", "text": "고민 없이 거절한다", "scores": { "SELF_CONTROL": 0.9, "SOC_CONFL": 0.1 } },
+      { "label": "M", "text": "분위기 봐서 한 잔만 받는다", "scores": { "SELF_CONTROL": 0.5, "SOC_CONFL": 0.5 } },
+      { "label": "H", "text": "그 '한 잔'이 결국 열 잔이 된다", "scores": { "SELF_CONTROL": 0.1, "SOC_CONFL": 0.8 }, "triggers": { "DRUNK": 1 } }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "거울 속 내 얼굴을 오래 바라봤다. 가장 가까운 생각은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "나이 드는 게 티난다", "scores": { "SELF_ESTEEM": 0.2, "ATT_REAL": 0.8 } },
+      { "label": "M", "text": "그럭저럭 봐줄 만하다", "scores": { "SELF_ESTEEM": 0.5, "ATT_REAL": 0.6 } },
+      { "label": "H", "text": "오늘따라 좀 괜찮은데?", "scores": { "SELF_ESTEEM": 0.9, "ATT_OPTIM": 0.8 } }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "금요일 저녁 6시, 팀 전원이 야근 분위기다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "'내일 뵙겠습니다' 하고 일어선다", "scores": { "SELF_ESTEEM": 0.8, "SOC_CONFL": 0.1, "ACT_DILIG": 0.4 } },
+      { "label": "M", "text": "눈치 보다 한 시간만 남는다", "scores": { "SELF_ESTEEM": 0.4, "SOC_CONFL": 0.6, "ACT_DILIG": 0.5 } },
+      { "label": "H", "text": "같이 남아서 야식 시킨다", "scores": { "SOC_AGREE": 0.8, "ACT_DILIG": 0.7, "SOC_CONFL": 0.7 } }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "동료 실수를 상사가 내 탓으로 돌렸다. 즉각 반응은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "일단 받아치고 따로 정리한다", "scores": { "EMO_EXPR": 0.7, "SOC_CONFL": 0.1, "SELF_CONTROL": 0.6 } },
+      { "label": "M", "text": "그 자리선 조용히 넘기고 속으로 삭인다", "scores": { "EMO_EXPR": 0.2, "SOC_CONFL": 0.8, "EMO_STAB": 0.4 } },
+      { "label": "H", "text": "웃으면서 '아 네네' 하지만 이미 퇴사 계획 짜고 있다", "scores": { "EMO_EXPR": 0.1, "ATT_CYNIC": 0.9, "SOC_CONFL": 0.9 } }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "월급날 통장 보고 드는 감정은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "이 돈으로 한 달을 또 버틴다는 게 기적", "scores": { "ATT_CYNIC": 0.7, "ATT_REAL": 0.8, "ATT_OPTIM": 0.2 } },
+      { "label": "M", "text": "딱 필요한 만큼은 있네", "scores": { "ATT_REAL": 0.7, "ATT_OPTIM": 0.5 } },
+      { "label": "H", "text": "술이나 한잔 해야겠다", "scores": { "ATT_OPTIM": 0.4, "SELF_CONTROL": 0.2 }, "triggers": { "DRUNK": 1 } }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "아무도 안 시켰는데 새 프로젝트가 열린다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "내 일 아니다. 조용히 빠진다", "scores": { "ACT_DRIVE": 0.1, "ACT_RISK": 0.1, "SOC_EXT": 0.3 } },
+      { "label": "M", "text": "조건 보고 붙을지 결정한다", "scores": { "ACT_DRIVE": 0.5, "ACT_RISK": 0.5, "ATT_REAL": 0.7 } },
+      { "label": "H", "text": "제가 리드 해볼게요", "scores": { "ACT_DRIVE": 0.9, "ACT_RISK": 0.8, "SELF_ESTEEM": 0.8 } }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "SNS에 자기 근황 올리는 빈도는?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "계정은 있는데 유령회원 수준", "scores": { "EMO_EXPR": 0.1, "SELF_ESTEEM": 0.4, "SOC_EXT": 0.2 } },
+      { "label": "M", "text": "가끔 괜찮은 순간만 올린다", "scores": { "EMO_EXPR": 0.5, "SELF_ESTEEM": 0.6, "SOC_EXT": 0.5 } },
+      { "label": "H", "text": "먹는 거, 보는 거, 느끼는 거 다 올린다", "scores": { "EMO_EXPR": 0.9, "SOC_EXT": 0.8, "SELF_ESTEEM": 0.7 } }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "소개팅 끝나고 상대가 먼저 연락이 없다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "내가 별로였나 싶어 되짚는다", "scores": { "SELF_AWARE": 0.7, "SELF_ESTEEM": 0.3, "EMO_STAB": 0.4 } },
+      { "label": "M", "text": "각자 바쁜 거지 뭐", "scores": { "SELF_AWARE": 0.4, "EMO_STAB": 0.7 } },
+      { "label": "H", "text": "사람 보는 눈이 없네. 다음", "scores": { "SELF_ESTEEM": 0.8, "ATT_CYNIC": 0.7, "EMO_STAB": 0.6 } }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "실수를 했다. 다음 날 아침의 마음 상태는?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "이불 속에서 몇 번이나 되감는다", "scores": { "EMO_STAB": 0.2, "SELF_AWARE": 0.8, "SELF_ESTEEM": 0.3 } },
+      { "label": "M", "text": "찜찜하지만 일은 해야 한다", "scores": { "EMO_STAB": 0.6, "ACT_DILIG": 0.6 } },
+      { "label": "H", "text": "어제 일은 어제의 나다", "scores": { "EMO_STAB": 0.9, "ATT_OPTIM": 0.8, "SELF_AWARE": 0.3 } }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "친구가 주사가 심해서 오늘도 난리다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "택시 태워 보내고 나도 일어선다", "scores": { "EMO_EMPATHY": 0.7, "SELF_CONTROL": 0.8 } },
+      { "label": "M", "text": "옆에서 말은 들어주지만 동참은 안 한다", "scores": { "EMO_EMPATHY": 0.6, "SELF_CONTROL": 0.6 } },
+      { "label": "H", "text": "같이 달린다. 오늘은 같은 편", "scores": { "SOC_AGREE": 0.9, "SELF_CONTROL": 0.1, "EMO_EMPATHY": 0.5 }, "triggers": { "DRUNK": 1 } }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "뉴스 보면서 드는 가장 흔한 반응은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "그래도 조금씩은 나아지고 있다", "scores": { "ATT_OPTIM": 0.8, "ATT_CYNIC": 0.2 } },
+      { "label": "M", "text": "사건마다 다르게 본다", "scores": { "ATT_OPTIM": 0.5, "ATT_CYNIC": 0.5, "ATT_REAL": 0.7 } },
+      { "label": "H", "text": "세상은 원래 이렇다", "scores": { "ATT_CYNIC": 0.9, "ATT_OPTIM": 0.1, "ATT_REAL": 0.7 } }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "퇴근 후 자기계발 공부를 시작했다. 3개월 후 모습은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "책만 사놓고 손도 안 댔다", "scores": { "ACT_DILIG": 0.1, "SELF_CONTROL": 0.3, "ATT_REAL": 0.8 } },
+      { "label": "M", "text": "중간중간 쉬엄쉬엄 이어가고 있다", "scores": { "ACT_DILIG": 0.6, "SELF_CONTROL": 0.6 } },
+      { "label": "H", "text": "매일 출석 스티커 붙이고 있다", "scores": { "ACT_DILIG": 0.95, "SELF_CONTROL": 0.85, "ACT_DRIVE": 0.7 } }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "안 해본 거 하나만 해보자. 가장 끌리는 선택은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "괜히 시간 버릴 것 같다. 패스", "scores": { "ACT_RISK": 0.1, "ATT_OPTIM": 0.3, "ACT_DRIVE": 0.2 } },
+      { "label": "M", "text": "평이 좋으면 한번 해본다", "scores": { "ACT_RISK": 0.5, "ATT_REAL": 0.7 } },
+      { "label": "H", "text": "바로 예약한다", "scores": { "ACT_RISK": 0.9, "ACT_DRIVE": 0.8, "ATT_OPTIM": 0.7 } }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "주변에서 나를 어떻게 본다고 생각하는가?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "별 존재감 없이 묻어가는 사람", "scores": { "SELF_ESTEEM": 0.2, "SOC_EXT": 0.3 } },
+      { "label": "M", "text": "무난하게 괜찮은 사람", "scores": { "SELF_ESTEEM": 0.6, "EMO_STAB": 0.7 } },
+      { "label": "H", "text": "있으면 모임이 살아나는 사람", "scores": { "SELF_ESTEEM": 0.9, "SOC_EXT": 0.9, "EMO_EXPR": 0.8 } }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "큰돈이 생기면 제일 먼저 떠오르는 용도는?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "빚 갚고 비상금으로 묶어둔다", "scores": { "ATT_REAL": 0.9, "ACT_RISK": 0.1, "SELF_CONTROL": 0.8 } },
+      { "label": "M", "text": "일부는 저축, 일부는 나를 위한 소비", "scores": { "ATT_REAL": 0.7, "SELF_CONTROL": 0.6 } },
+      { "label": "H", "text": "일단 좋은 거 사고 나중에 생각한다", "scores": { "ATT_REAL": 0.2, "ACT_RISK": 0.7, "SELF_CONTROL": 0.2 } }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "가족 모임에서 부모님이 잔소리를 시작하신다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "웃으면서 '네네' 하고 화제 돌린다", "scores": { "SOC_CONFL": 0.9, "EMO_EMPATHY": 0.6, "SOC_AGREE": 0.7 } },
+      { "label": "M", "text": "필요한 부분만 반박하고 넘긴다", "scores": { "SOC_CONFL": 0.4, "EMO_EXPR": 0.6, "SELF_ESTEEM": 0.7 } },
+      { "label": "H", "text": "제가 알아서 할게요 하고 빠진다", "scores": { "SOC_CONFL": 0.2, "SOC_AGREE": 0.2, "EMO_EMPATHY": 0.3 } }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "잘나가는 친구 소식을 접했다. 진짜 속마음은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "진심으로 축하한다", "scores": { "EMO_EMPATHY": 0.9, "ATT_OPTIM": 0.7, "SELF_ESTEEM": 0.7 } },
+      { "label": "M", "text": "부럽긴 한데 내 길이 있다", "scores": { "EMO_EMPATHY": 0.6, "SELF_ESTEEM": 0.7, "ATT_REAL": 0.7 } },
+      { "label": "H", "text": "겉으로 축하, 속으론 왠지 기분 안 좋다", "scores": { "EMO_EMPATHY": 0.3, "ATT_CYNIC": 0.7, "EMO_EXPR": 0.2 } }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "단톡방에서 의견이 갈린다. 누가 결정할 차례다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "나는 뭐든 좋다고 흘려보낸다", "scores": { "SELF_CONTROL": 0.2, "SOC_AGREE": 0.7, "SOC_CONFL": 0.8 } },
+      { "label": "M", "text": "중재안을 제시한다", "scores": { "SELF_CONTROL": 0.6, "EMO_EMPATHY": 0.7, "SOC_CONFL": 0.4 } },
+      { "label": "H", "text": "그냥 내가 정해서 밀어붙인다", "scores": { "SELF_CONTROL": 0.95, "SOC_CONFL": 0.1, "SELF_ESTEEM": 0.8 } }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "새해 다짐을 세웠다. 2월 말 현재 상태는?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "다짐이 뭐였는지도 잘 모르겠다", "scores": { "ACT_DILIG": 0.1, "SELF_AWARE": 0.3, "ATT_REAL": 0.7 } },
+      { "label": "M", "text": "절반은 유지, 절반은 조용히 폐기", "scores": { "ACT_DILIG": 0.5, "SELF_AWARE": 0.6 } },
+      { "label": "H", "text": "꾸준히 업데이트하며 진행 중", "scores": { "ACT_DILIG": 0.85, "ACT_DRIVE": 0.8, "SELF_CONTROL": 0.8 } }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "연인과 다퉜다. 내가 먼저 연락하는 편인가?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "내가 먼저 한다. 싸움은 빨리 끝내고 싶다", "scores": { "EMO_EMPATHY": 0.8, "SOC_CONFL": 0.9, "EMO_EXPR": 0.6 } },
+      { "label": "M", "text": "하루 정도는 서로 식히고 연락한다", "scores": { "EMO_EMPATHY": 0.6, "EMO_STAB": 0.7 } },
+      { "label": "H", "text": "먼저 연락 안 한다. 상대가 와야 한다", "scores": { "SELF_ESTEEM": 0.8, "SOC_CONFL": 0.2, "EMO_EMPATHY": 0.3 } }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "명품 가방 자랑하는 친구 옆에 앉았다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "'오 예쁘네' 하고 관심 없다", "scores": { "SELF_ESTEEM": 0.7, "ATT_REAL": 0.8, "ATT_CYNIC": 0.4 } },
+      { "label": "M", "text": "가격 듣고 속으로 놀란다", "scores": { "ATT_REAL": 0.7, "SELF_ESTEEM": 0.5 } },
+      { "label": "H", "text": "나도 살까 잠깐 진지해진다", "scores": { "SELF_ESTEEM": 0.4, "ACT_RISK": 0.6, "ATT_REAL": 0.3 } }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "친구와 손절해야 할 상황이 왔다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "확실히 말하고 끊는다", "scores": { "EMO_EXPR": 0.8, "SELF_ESTEEM": 0.8, "SOC_CONFL": 0.1 } },
+      { "label": "M", "text": "연락 빈도를 서서히 줄인다", "scores": { "SOC_CONFL": 0.8, "EMO_EXPR": 0.3, "EMO_STAB": 0.7 } },
+      { "label": "H", "text": "손절 못 하고 끌려간다", "scores": { "SELF_CONTROL": 0.2, "SOC_AGREE": 0.9, "SOC_CONFL": 0.9 } }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "주식/코인 급등락 소식이 뜬다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "나와 상관 없는 얘기", "scores": { "ACT_RISK": 0.1, "ATT_REAL": 0.8, "SELF_CONTROL": 0.7 } },
+      { "label": "M", "text": "공부는 해두지만 큰 금액은 안 넣는다", "scores": { "ACT_RISK": 0.5, "ATT_REAL": 0.8, "SELF_CONTROL": 0.7 } },
+      { "label": "H", "text": "타이밍 재서 바로 들어간다", "scores": { "ACT_RISK": 0.9, "ACT_DRIVE": 0.8, "SELF_CONTROL": 0.3 } }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "주말 하루, 계획 없이 비어있다. 가장 가능성 높은 모습은?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "침대와 폰으로 하루가 간다", "scores": { "ACT_DRIVE": 0.1, "SOC_EXT": 0.2, "ACT_DILIG": 0.2 } },
+      { "label": "M", "text": "집안일 조금, 산책 조금", "scores": { "ACT_DRIVE": 0.5, "ACT_DILIG": 0.5 } },
+      { "label": "H", "text": "전시/공연/새 카페 일정 채운다", "scores": { "ACT_DRIVE": 0.8, "ACT_RISK": 0.7, "SOC_EXT": 0.7 } }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "상사 평가가 기대보다 낮게 나왔다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "내 부족한 부분 인정하고 개선안 짠다", "scores": { "SELF_AWARE": 0.9, "ACT_DILIG": 0.8, "EMO_STAB": 0.7 } },
+      { "label": "M", "text": "부분적으로 받아들이고 부분적으로 반박한다", "scores": { "SELF_AWARE": 0.6, "SELF_ESTEEM": 0.7, "SOC_CONFL": 0.3 } },
+      { "label": "H", "text": "평가자 편견이다. 무시한다", "scores": { "ATT_CYNIC": 0.8, "SELF_ESTEEM": 0.8, "SELF_AWARE": 0.2 } }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "조용한 카페에서 책을 읽는 시간이 주어진다면?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "그런 시간이 제일 편하고 좋다", "scores": { "SOC_EXT": 0.1, "EMO_STAB": 0.8, "ACT_DILIG": 0.7 } },
+      { "label": "M", "text": "한 시간은 괜찮다. 그 다음은 지루하다", "scores": { "SOC_EXT": 0.5, "EMO_STAB": 0.6 } },
+      { "label": "H", "text": "혼자 가만히 있는 건 고문이다", "scores": { "SOC_EXT": 0.9, "EMO_STAB": 0.3, "EMO_EXPR": 0.7 } }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "숙취로 오전을 날렸다. 저녁에 다시 술 약속이 잡힌다",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "컨디션 핑계로 취소한다", "scores": { "SELF_CONTROL": 0.8, "ATT_REAL": 0.8, "EMO_STAB": 0.6 } },
+      { "label": "M", "text": "나가서 한두 잔만 하고 들어온다", "scores": { "SELF_CONTROL": 0.5, "SOC_CONFL": 0.5 } },
+      { "label": "H", "text": "어제의 내가 이겼다. 오늘의 나는 다시 붙는다", "scores": { "SELF_CONTROL": 0.1, "ACT_RISK": 0.5, "SOC_AGREE": 0.6 }, "triggers": { "DRUNK": 1 } }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "죽기 전에 뭘 제일 후회할 것 같은가?",
+    "hidden": false,
+    "options": [
+      { "label": "L", "text": "하지 못한 일들. 너무 안전하게 살았다", "scores": { "ACT_RISK": 0.2, "SELF_AWARE": 0.8, "ATT_REAL": 0.7 } },
+      { "label": "M", "text": "해야 할 때 말하지 못한 말들", "scores": { "EMO_EXPR": 0.3, "EMO_EMPATHY": 0.7, "SELF_AWARE": 0.8 } },
+      { "label": "H", "text": "후회라는 개념 자체가 시간 낭비다", "scores": { "ATT_OPTIM": 0.7, "EMO_STAB": 0.8, "SELF_AWARE": 0.3 } }
     ]
   }
 ]
