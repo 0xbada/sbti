@@ -61,6 +61,15 @@ main {
   display: none;
 }
 
+.result-banner--friend {
+  background: #f4f4f4;
+  border-color: #dcdcdc;
+}
+
+.result-banner--friend .result-banner-match {
+  color: var(--result-accent);
+}
+
 .result-header {
   text-align: center;
   padding: 2rem 0 2.5rem;
@@ -187,6 +196,85 @@ main {
   justify-content: space-between;
   font-size: 0.75rem;
   color: var(--result-muted);
+}
+
+.result-share {
+  padding: 2rem 0 1.5rem;
+  border-top: 1px solid var(--result-border);
+  text-align: center;
+}
+
+.result-share-heading {
+  font-size: 0.95rem;
+  color: var(--result-muted);
+  margin: 0 0 1rem;
+  letter-spacing: 0.01em;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 7rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--result-border);
+  background: #fff;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--result-accent);
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.08s ease, border-color 0.12s ease;
+}
+
+.share-btn:hover {
+  border-color: var(--result-accent);
+  background: #f7f7f7;
+}
+
+.share-btn:active {
+  transform: scale(0.98);
+}
+
+.share-btn--kakao {
+  background: #fee500;
+  border-color: #fee500;
+  color: #3c1e1e;
+}
+
+.share-btn--kakao:hover {
+  background: #ffd600;
+  border-color: #ffd600;
+}
+
+.share-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(0.75rem);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 0.7rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+
+.share-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .result-actions {

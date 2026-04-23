@@ -14,10 +14,14 @@ eleventyComputed:
   ogImage: "/img/types/{{ type.code }}.jpg"
 ---
 
-<article class="result-page" data-type-code="{{ type.code }}">
-  <aside class="result-banner" id="result-banner" hidden aria-label="당신의 테스트 결과">
+<article class="result-page"
+         data-type-code="{{ type.code }}"
+         data-type-name-ko="{{ type.nameKo }}"
+         data-type-tagline="{{ type.tagline }}"
+         data-og-image="/img/types/{{ type.code }}.jpg">
+  <aside class="result-banner" id="result-banner" hidden aria-label="테스트 결과">
     <div class="result-banner-row">
-      <span class="result-banner-label">당신의 결과</span>
+      <span class="result-banner-label" id="banner-label">당신의 결과</span>
       <span class="result-banner-match" id="banner-match-rate"></span>
     </div>
     <p class="result-banner-note" id="banner-note"></p>
@@ -65,6 +69,21 @@ eleventyComputed:
     {% endfor %}
   </section>
 
+  <section class="result-share" aria-label="결과 공유">
+    <p class="result-share-heading">결과를 친구에게 공유하기</p>
+    <div class="share-buttons">
+      <button type="button" class="share-btn share-btn--kakao" id="share-kakao">
+        <span aria-hidden="true">💬</span> 카카오톡
+      </button>
+      <button type="button" class="share-btn" id="share-copy">
+        <span aria-hidden="true">🔗</span> 링크 복사
+      </button>
+      <button type="button" class="share-btn" id="share-download">
+        <span aria-hidden="true">⬇️</span> 이미지 저장
+      </button>
+    </div>
+  </section>
+
   <section class="result-actions">
     <button type="button" class="cta" id="result-retry-btn">다시 테스트하기</button>
     <a href="/" class="result-link">홈으로</a>
@@ -73,4 +92,9 @@ eleventyComputed:
   <p class="result-disclaimer">엔터테인먼트 목적의 패러디 테스트입니다. 임상 심리 도구가 아닙니다.</p>
 </article>
 
-<script src="/js/result.js"></script>
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js"
+        integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6"
+        crossorigin="anonymous"
+        defer></script>
+<script src="/js/result.js" defer></script>
+<script src="/js/share.js" defer></script>
