@@ -127,14 +127,15 @@ CODE:
 |---|---|---|
 | 직설 팩폭 | 쿨/차갑 | FUCK, SHIT, POOR |
 | 자조 루저 | "네, 접니다" | ATM-er, SOLO, IMSB, IMFW, ZZZZ, OH-NO |
-| 허세 과시 | 살짝 과장된 자뻑 | BOSS, Dior-s, SEXY, GOGO |
+| 허세 과시 | 살짝 과장된 자뻑 | BOSS, SEXY, GOGO |
 | 따뜻함 | 다정 + 오지랖 킥 | MUM, LOVE-R, THAN-K |
-| 사색 관찰 | 한 발 떨어진 비꼼 | THIN-K, JOKE-R, OJBK, FAKE, WOC! |
+| 사색 관찰 | 한 발 떨어진 비꼼 | THIN-K, JOKE-R, OJBK, FAKE, WOC!, Dior-s |
 
 **Phase 0 선행 검증 완료 (§6 참고):**
 - **FAKE**: "사색 관찰" 확정 (원작: 마스크 체인저, 본인 자각형)
 - **MUM**: "따뜻함" 확정 (원작: 엄마/케어테이커, 침묵 해석 폐기)
 - **WOC!**: "사색 관찰" 확정 (원작: 겉 드라마틱 리액션 + 속 차분 관찰의 이중 레이어 — 허세 과시 아님)
+- **Dior-s**: "사색 관찰" 재확정 (원작: 소비주의 거부, low-desire mode의 평화 — 명품 브랜드명은 표면, 본질은 관조 — 2026-04-23 구현 세션 리서치 결과)
 
 **작성 순서 (배치):**
 1. 직설 팩폭 (톤 기준점)
@@ -299,9 +300,286 @@ WOC!:
     주의: 과시·자뻑으로 오독하지 말 것 — 드라마틱 표현은 스킨이고 코어는 관조자.
 ```
 
-### 6.2 나머지 18개 (구현 세션에서 채움)
+### 6.2 나머지 18개 (2026-04-23 구현 세션 작성)
 
-*공란 — Phase 0 리서치에서 작성*
+**소스 상태:** `sbti-test.org/en/types/{slug}` 주 소스(풍부), `rednotememe.com/guides/sbti-personality-test` 단일 페이지로 전 유형 교차검증. `sbti.ai`=403, `sbti.dev`=연결거부 — 2차 소스 대체.
+
+```yaml
+FUCK:
+  origin_intent: "반사적 욕, 생존 본능 에너지"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "직설 팩폭"
+  key_dimensions:
+    HIGH: [EMO_EXPR, SOC_EXT]
+    LOW:  [SELF_CONTROL, EMO_EMPATHY]
+  naming_hint: "-러(욕쟁이러) | 신조어(풀자) — 草者 중의적 방지"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "FUCK YEAH / FUCK OFF" 양극 감정 표현, 草者(풀남) 시각 말장난.
+    → 한국 재해석: "존나 / 아 씨" 반사 욕이 기본 반응, 나쁜 의도 아님. 반응이 빠름.
+    한국 맥락 예시: 단톡방 드립에 바로 "ㅋㅋ 미쳤네", 회식에서 분위기 띄움.
+    금지: 실제 비속어 남발, 폭력성 암시.
+
+SHIT:
+  origin_intent: "냉소 리얼리스트, 입은 욕 손은 엑셀"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "직설 팩폭"
+  key_dimensions:
+    HIGH: [SELF_AWARE, SELF_ESTEEM, ACT_DRIVE]
+    LOW:  [ATT_OPTIM, SOC_EXT, EMO_EMPATHY]
+  naming_hint: "-러(씨부리러) | 신조어(입털이) | -뇌(염세뇌) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "이 프로젝트 진짜 ㅈ같네. 손: 조용히 엑셀 열기."
+    → 한국 재해석: 불평하면서 결국 다 해내는 사람. 말과 행동의 이중성.
+    FUCK과 대비: FUCK은 반사적/즉흥, SHIT은 의도적/성과지향.
+    금지: 진짜 무기력/우울로 해석 — 이 타입은 묵묵히 하는 쪽.
+
+ATM-er:
+  origin_intent: "일방적 제공자, 호구성 베풂"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "자조 루저"
+  key_dimensions:
+    HIGH: [EMO_EMPATHY, ACT_DILIG, SOC_AGREE]
+    LOW:  [SELF_ESTEEM, SELF_CONTROL]
+  naming_hint: "-러(퍼주러/계산러) | 신조어(송금러) | -보(호구보) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "送钱者 — 항상 계산서를 집는 사람, 부자 아님."
+    → 한국 재해석: 회식비 선결제, 더치페이 어색해서 다 내버림. 속은 지침.
+    한국 맥락 예시: 생일선물·경조사 기억 체크, "내가 살게" 습관.
+    금지: 바보/멍청이 조롱으로 기울기 — 자각은 있음, 멈추지 못할 뿐.
+
+BOSS:
+  origin_intent: "자연 리더, 즉결 판단자"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "허세 과시"
+  key_dimensions:
+    HIGH: [SELF_ESTEEM, ACT_DRIVE, SOC_CONFL]
+    LOW:  [SOC_EXT, EMO_EXPR]
+  naming_hint: "-왕(결정왕) | 신조어(리더러) | -자(지휘자) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "리더십 공백 시 주도, 방치 흐름보다 과한 추진 선호."
+    → 한국 재해석: 회의 정체 시 "자, 결론내죠" 자기가 정리. 선두 취향.
+    허세 자기인식: 본인도 "내가 나섰다"는 걸 알고 쿨한 척.
+    금지: 독재/갑질 톤 — 한국 '꼰대' 프레임 회피, '자진 중재자' 결.
+
+GOGO:
+  origin_intent: "즉행 모멘텀, 생각 전에 몸부터"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "허세 과시"
+  key_dimensions:
+    HIGH: [ACT_DRIVE, ACT_RISK, SOC_EXT]
+    LOW:  [SELF_AWARE, ATT_REAL]
+  naming_hint: "-러(돌진러) | 신조어(질주러) | -왕(실행왕) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "행동 충동이 숙고 충동을 앞섬, 다른 사람 숙고 끝나기 전 이미 떠남."
+    → 한국 재해석: "일단 ㄱㄱ", 계획보다 실행. 실수도 빠르게 반복.
+    BOSS와 구분: BOSS는 판단 후 지시, GOGO는 판단 스킵하고 몸.
+    금지: 무능/경솔 조롱 — '에너지 과잉'의 건강한 척 프레임 유지.
+
+SEXY:
+  origin_intent: "매력 어필, 관심 욕구, 존재감 과다"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "허세 과시"
+  key_dimensions:
+    HIGH: [SELF_ESTEEM, SOC_EXT, EMO_EXPR]
+    LOW:  [SOC_AGREE, EMO_EMPATHY]
+  naming_hint: "-러(매력러) | 신조어(끼부자) | -쟁이(매력쟁이) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "방에 들어가면 시선 집중, 아우라 기반 매력."
+    숨은 취약: "아무도 안 볼 때 나는 여전히 가치 있는가?"라는 내면 질문.
+    → 한국 재해석: SNS 셀카·인스타 스토리 자주, 인정 욕구 높음. 본인도 앎.
+    금지: 성적 묘사/외모 평가 — 한국 맥락에서 '매력 어필', '끼'까지만.
+
+LOVE-R:
+  origin_intent: "감정 과몰입, 이상주의 로맨티스트"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "따뜻함"
+  key_dimensions:
+    HIGH: [EMO_EXPR, ATT_OPTIM, EMO_EMPATHY]
+    LOW:  [SELF_AWARE, EMO_STAB]
+  naming_hint: "-러(사랑러) | 신조어(연애뇌) | -뇌(로맨뇌) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "일상도 순간 영화 장면, 불꽃 아닌 안정은 힘들어함."
+    → 한국 재해석: 카톡 '♥' 남발, 기념일 계산, 드라마 대사 실생활 인용.
+    MUM과 구분: MUM은 돌봄(실용), LOVE-R는 감정 몰입(판타지).
+    금지: 여성 전유물화, 나이대 조롱 — 연령·성별 중립으로 유지.
+
+THAN-K:
+  origin_intent: "감사 과잉, 양심적 오버싱커"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "따뜻함"
+  key_dimensions:
+    HIGH: [EMO_EMPATHY, SOC_AGREE, SELF_AWARE]
+    LOW:  [EMO_EXPR, SELF_ESTEEM]
+  naming_hint: "-러(감사러) | 신조어(고마워러) | -보(양심보) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "작은 호의도 평생 빚처럼 가슴에 남아 과한 답례."
+    → 한국 재해석: 커피 한 잔 받으면 다음날 선물로 갚음. '과잉 답례' 부담.
+    LOVE-R와 구분: LOVE-R는 감정 분출, THAN-K는 부채감 내면화.
+    금지: 소심/약자 조롱 — '타인 생각 잘함'의 건강한 결 유지.
+
+THIN-K:
+  origin_intent: "분석 마비, 완벽주의 계산러"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "사색 관찰"
+  key_dimensions:
+    HIGH: [SELF_AWARE, ATT_REAL, ATT_CYNIC]
+    LOW:  [ACT_DRIVE, SOC_EXT, ACT_RISK]
+  naming_hint: "-러(생각러) | 신조어(뇌피셜러) | -뇌(고민뇌) 중 택"
+  rarity_candidate: rare
+  notes: |
+    원작 키 모티프: "100초 생각, 실행을 생각으로 대체."
+    "한 번만 더 생각했으면 피할 수 있었을 실수의 공포."
+    → 한국 재해석: 결제 전 리뷰 2시간, 스크린샷 폴더 가득. 결정 피로.
+    JOKE-R/OJBK와 구분: THIN-K는 결정 전 단계, JOKE-R는 결정 후 회고, OJBK는 결정 자체 포기.
+    금지: 지능 낮음/바보 조롱 — 오히려 영리함이 독이 된 케이스.
+
+JOKE-R:
+  origin_intent: "유머 방패, 농담 뒤 진심 숨김"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "사색 관찰"
+  key_dimensions:
+    HIGH: [EMO_EMPATHY, EMO_EXPR, ATT_CYNIC]
+    LOW:  [SELF_ESTEEM, SELF_AWARE]
+  naming_hint: "-러(드립러) | 신조어(광대러) | -쟁이(농담쟁이) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "유머가 생존 장비, 분위기 무마용. 가장 깊이 숨는 타입."
+    "자신이 펀치라인이 된 순간의 자각 — 슬픈 광대."
+    → 한국 재해석: 분위기 무거우면 드립 던짐, 본인 얘긴 못함. '괜찮아?' 받으면 드립으로 탈출.
+    금지: 광대=바보 프레임 — 감정 지능 높은 쪽. 'ㅋㅋ' 남발 속 진심 차단.
+
+OH-NO:
+  origin_intent: "불안한 재앙 예측자, 최악 상정"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "자조 루저"
+  key_dimensions:
+    HIGH: [SELF_AWARE, ATT_CYNIC, ACT_DILIG]
+    LOW:  [EMO_STAB, ATT_OPTIM, SOC_EXT]
+  naming_hint: "-러(걱정러) | 신조어(망했어러) | -뇌(불안뇌) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "컵이 기울기 전에 이미 쏟아진 장면, 합선, 소방훈련 상상."
+    "재난 감지 최적화된 신경계 — 위기 때 쓸모, 평소엔 진 빠짐."
+    → 한국 재해석: 여행 전 최악 시나리오 n개, 약속 30분 전 도착. '우찌살지' 입버릇.
+    IMSB/IMFW와 구분: OH-NO는 외부 재난 걱정, IMSB는 자기 탓, IMFW는 무능감.
+    금지: 불안장애 의학 표현 — '습관적 상상' 수준까지만.
+
+OJBK:
+  origin_intent: "초연한 철학 황제, 사소 무관심"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "사색 관찰"
+  key_dimensions:
+    HIGH: [EMO_STAB, ATT_REAL]
+    LOW:  [ACT_DRIVE, EMO_EXPR, ATT_OPTIM]
+  naming_hint: "-러(오키러) | 신조어(아무거나러) | -보(무심보) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "점심 쌀/면, 황제의 평정으로 '아무거나'. 초연한 무관심."
+    → 한국 재해석: 단톡방 투표 '아무거나 괜찮아' 담당. 짜증 아님, 진심 OK.
+    THIN-K와 구분: THIN-K는 고민으로 마비, OJBK는 고민 자체 불필요.
+    금지: 무기력/우울 — 오히려 선택 피로 면역된 고수.
+
+ZZZZ:
+  origin_intent: "회피 잠수러, 데드라인형 폭발력"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "자조 루저"
+  key_dimensions:
+    HIGH: [SELF_AWARE]
+    LOW:  [ACT_DRIVE, ACT_DILIG, SOC_EXT, ATT_OPTIM]
+  naming_hint: "-러(잠수러) | 신조어(읽씹러) | -보(미루보) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "읽지 않은 메시지 99개 무시, 진짜 마감에만 등장."
+    "선제 동기 아닌 막판 압박에 최적화."
+    → 한국 재해석: 카톡 '1' 안 지움, 과제 마감 3시간 전 등장. 결과는 오히려 괜찮음.
+    금지: 나태/무책임 조롱 — '압박 연비 높음'의 역설 강조.
+
+POOR:
+  origin_intent: "레이저 집중 미니멀리스트"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "직설 팩폭"
+  key_dimensions:
+    HIGH: [SELF_AWARE, ACT_DRIVE, ACT_DILIG]
+    LOW:  [EMO_EXPR, SOC_EXT, ATT_OPTIM]
+  naming_hint: "-러(긴축러) | 신조어(짠돌이) | -뇌(절약뇌) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프(sbti-test.org): "단일 목표에 자원 집중, 자원 부족 아닌 의도적 압축."
+    원작 키 모티프(rednotememe): "구조적으로 돈 없음, 자조하되 패배 아님."
+    → 한국 재해석: 두 해석 융합 — "짠내 + 목표 집중". 소비 vs 저축 중 한쪽 극단.
+    SHIT/FUCK와 구분: POOR는 자원 관련, SHIT/FUCK는 태도.
+    금지: 저소득층/빈곤 조롱 — '자발적 미니멀'과 '짠내' 유머 영역까지만.
+
+SOLO:
+  origin_intent: "보호적 고립자, 거리=안전"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "자조 루저"
+  key_dimensions:
+    HIGH: [SELF_CONTROL, SELF_AWARE]
+    LOW:  [SOC_EXT, EMO_EMPATHY, ACT_DRIVE]
+  naming_hint: "-러(혼자러) | 신조어(나홀로러) | -보(솔로보) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "거리가 실망보다 관리하기 쉬움, 보호 메커니즘."
+    → 한국 재해석: 단체 사진 찍어주는 포지션, '둘러싸여 있어도 외부인' 감각.
+    금지: '연애 불가/외톨이' 조롱 — '선택적 고립'의 주체성 유지.
+
+IMSB:
+  origin_intent: "자책 무한루프, 내부 검열관"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "자조 루저"
+  key_dimensions:
+    HIGH: [EMO_EMPATHY, SELF_AWARE]
+    LOW:  [SELF_ESTEEM, EMO_STAB, ATT_OPTIM]
+  naming_hint: "-러(자책러) | 신조어(내탓러) | -뇌(자책뇌) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "타인 실수엔 너그럽고 본인 실수는 잔인하게 복기."
+    "작은 실패를 큰 증거로 만드는 루프."
+    → 한국 재해석: 단톡방 오타 하나도 '다들 이상하게 봤을 듯', 대화 끝나고 복기.
+    OH-NO와 구분: OH-NO는 외부 재난, IMSB는 자기 검열.
+    금지: 자살·자해 암시 — '한심하다' 수준까지만.
+
+IMFW:
+  origin_intent: "취약 투명, 진심 무방비 내향"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "자조 루저"
+  key_dimensions:
+    HIGH: [EMO_EMPATHY, SOC_AGREE]
+    LOW:  [SELF_ESTEEM, ACT_DRIVE, EMO_STAB]
+  naming_hint: "-러(무쓸모러) | 신조어(투명러) | -보(순두부보) 중 택"
+  rarity_candidate: common
+  notes: |
+    원작 키 모티프: "진심 한 조각에 전적 신뢰 넘기는 역설."
+    "낮은 베이스 + 급등 감정 투자."
+    → 한국 재해석: 누가 조금만 챙겨주면 '감동해서' 올인, 상처도 깊음.
+    IMSB와 구분: IMSB는 자기 검열, IMFW는 과잉 신뢰/취약.
+    금지: '민폐/쓸모없음' 직격 — 취약성을 존엄 있게.
+
+Dior-s:
+  origin_intent: "소비주의 거부, 저욕망 평화"
+  source_sites: ["sbti-test.org", "rednotememe.com"]
+  archetype_family: "사색 관찰"
+  key_dimensions:
+    HIGH: [SELF_AWARE, ACT_DILIG, ATT_CYNIC]
+    LOW:  [SOC_EXT, EMO_EXPR, ATT_OPTIM]
+  naming_hint: "-러(저욕망러) | 신조어(디올러/됐어러) | -뇌(탈소비뇌) 중 택"
+  rarity_candidate: rare
+  notes: |
+    원작 키 모티프(sbti-test.org): "소비 야망 거부, 저욕망 모드의 평화, 자기계발 허슬 opt-out."
+    원작 키 모티프(rednotememe): "바닥 Loser, 반등 대기, 결국 글로업 기대."
+    → 두 해석 합의: "Dior 브랜드명은 함정. '됐어(die)'+'s' 말장난 — 소비 거부/바닥 자기인정의 사색 관찰 결."
+    §3 톤표 이동: 기존 '허세 과시' → '사색 관찰' (2026-04-23 리서치에서 재분류, OJBK와 한 쌍).
+    금지: 명품 브랜드명 언급 — 'Dior'는 코드일 뿐, 본문에선 '명품', '브랜드 과시' 수준 추상화 혹은 언급 회피.
+```
 
 ---
 
