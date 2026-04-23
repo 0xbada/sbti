@@ -24,8 +24,29 @@
   <link rel="preload" href="/fonts/Paperlogy-6SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/base.css">
   {% if pageCss %}<link rel="stylesheet" href="/css/{{ pageCss }}.css">{% endif %}
+
+  {% if site.analytics.gtmContainerId %}
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','{{ site.analytics.gtmContainerId }}');</script>
+  {% endif %}
+  {% if site.analytics.ga4MeasurementId %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4MeasurementId }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.analytics.ga4MeasurementId }}', { anonymize_ip: true });
+  </script>
+  {% endif %}
 </head>
 <body>
+  {% if site.analytics.gtmContainerId %}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.analytics.gtmContainerId }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {% endif %}
   <main>
     {{ content | safe }}
   </main>

@@ -1,0 +1,24 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/quiz/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  {%- for type in types %}
+  <url>
+    <loc>{{ site.url }}/result/{{ type.slug }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>{% if type.fallback or type.hidden %}0.5{% elif type.rarity == "rare" %}0.7{% else %}0.8{% endif %}</priority>
+  </url>
+  {%- endfor %}
+</urlset>
