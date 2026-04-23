@@ -4,7 +4,7 @@
   "description": "MBTI 패러디 성격 테스트 — 30문항 5분에 27개 유형 중 나의 진짜 유형을 확인",
   "locale": "ko_KR",
   "analytics": {
-    "ga4MeasurementId": "",
-    "gtmContainerId": ""
+    "ga4MeasurementId": "G-MTMBPFX7GW",
+    "gtmContainerId": "GTM-K2K7Z9V5"
   }
 }
