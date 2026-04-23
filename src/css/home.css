@@ -46,11 +46,13 @@ h2 {
   margin: 0 0 1rem;
 }
 
-.about p {
+.about p,
+.origin p {
   color: #2a2a2a;
 }
 
-.about strong {
+.about strong,
+.origin strong {
   color: #111;
 }
 
