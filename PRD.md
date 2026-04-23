@@ -250,26 +250,27 @@ SBTI(Silly/Satirical Behavioral Type Indicator)는 2026년 4월 중국발 바이
 
 ## 15. 상태 요약 (2026-04-23 기준)
 
-전체 P0 체크리스트 **7/12 완료** + **2/12 부분 완료**. 기술 기반은 다 섰고, 콘텐츠·카카오 공유·SEO·QA가 남음.
+전체 P0 체크리스트 **콘텐츠·카카오 공유 완료**. 남은 건 SEO·QA·배포 검증.
 
 ### 구현 완료 (로컬·원격 모두 동기화)
 - **인프라**: GitHub `0xbada/sbti` + CF Pages 자동 배포 + `sbti.funhada.xyz` 커스텀 도메인
 - **스택**: Eleventy 3.1.5 + Nunjucks + Vanilla JS, Node 18+, `@11ty/eleventy` 단일 의존성
-- **데이터 스키마**: 15차원(5모델×3축) + 샘플 6유형 + 샘플 3문항 (JSON)
-- **채점 엔진**: 유클리드 최근접 + HHHH 폴백 + DRUNK 히든 오버라이드, 12개 스냅샷 테스트
+- **데이터 스키마**: 15차원(5모델×3축) + 27유형 + 30문항 (JSON)
+- **채점 엔진**: 유클리드 최근접 + HHHH 폴백 + DRUNK 히든 오버라이드, 스냅샷 테스트
 - **퀴즈 UI**: 상태머신, localStorage 이어하기, auto-advance, 이전 버튼
-- **결과 라우팅**: Eleventy pagination → 6개 `/result/{slug}/` 자동 생성, OG 메타 베이크드
+- **결과 라우팅**: Eleventy pagination → 27개 `/result/{slug}/` 자동 생성, OG 메타 베이크드 (type.thumbnailPath 기반)
 - **매칭률 배너**: sessionStorage 기반 (공유 유입/직접 유입 UX 분기)
-- **OG 카드**: 6/27 플레이스홀더 JPG (1200×630, ImageMagick 자동 생성 스크립트)
+- **27유형 콘텐츠**: 원작 27유형 전부 한국어 재창작 완료 (nameKo/tagline/description/15차원 프로필)
+- **프로필 검증**: `scripts/validate-profiles.js` — 일반 25개 쌍 L2 ≥ 0.5 보장 (TDD 5개 유닛 테스트)
+- **카카오톡 공유**: Kakao JS SDK + 결과 페이지 공유 버튼 + 스크린샷 다운로드 + 링크 복사, 매치율 개인화 메시지
+- **OG 카드**: 27/27 플레이스홀더 JPG (1200×630, ImageMagick 자동 생성, URL-unsafe 문자 sanitize)
 
 ### 남은 작업 (우선순위)
-1. **카카오톡 공유 통합** — Kakao JS SDK + 결과 페이지 공유 버튼 + 스크린샷 다운로드 + 링크 복사. OG 카드 있는 지금이 바이럴 루프 완성의 직전 단계.
-2. **21유형 + 27문항 콘텐츠** — types.json + questions.json 추가만으로 pagination·채점이 자동 확장. 템플릿 코드 수정 불필요. 가장 시간 드는 작업 → 별도 세션 추천.
-3. **21개 OG 카드 재생성** — 콘텐츠 추가 후 `node scripts/generate-og-cards.js` 1회 실행.
-4. **랜딩 SEO 콘텐츠** — 설명문, MBTI 비교표, FAQ, 구조화 데이터(Quiz 스키마).
-5. **GA4/GTM 연동** + `robots.txt` + `sitemap.xml`.
-6. **실기기 모바일 QA** — iOS Safari, Android Chrome 주요 해상도 + 카카오톡 인앱 브라우저.
-7. **베타 배포 + 친구 테스트** — 10명 정도 실제 흐름 검증.
+1. **랜딩 SEO 콘텐츠** — 설명문, MBTI 비교표, FAQ, 구조화 데이터(Quiz 스키마).
+2. **GA4/GTM 연동** + `robots.txt` + `sitemap.xml`.
+3. **실기기 모바일 QA** — iOS Safari, Android Chrome 주요 해상도 + 카카오톡 인앱 브라우저.
+4. **베타 배포 + 친구 테스트** — 10명 정도 실제 흐름 검증.
+5. **디자이너 고퀄 OG 카드 교체** — 현재 플레이스홀더 27/27, 실제 디자인 JPG로 교체.
 
 ### P1 미착수
 - AI 초상화 생성 (§14.5) — MAU 5k+ 달성 후 P1
@@ -281,5 +282,6 @@ SBTI(Silly/Satirical Behavioral Type Indicator)는 2026년 4월 중국발 바이
 - 빌드: `npx @11ty/eleventy --quiet`
 - 로컬 개발: `npm start` (eleventy --serve)
 - 테스트: `npm test` (Node built-in test runner, glob)
+- 프로필 검증: `npm run validate` (일반 25개 쌍 L2 ≥ 0.5 게이트)
 - OG 카드 재생성: `node scripts/generate-og-cards.js`
 - 커밋 컨벤션: §CLAUDE.md의 7단계 분리 커밋 패턴 준수
