@@ -7,3 +7,5 @@ _site/
 .wrangler/
 .vscode/
 .idea/
+.cache/
+.claude/
