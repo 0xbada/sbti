@@ -11,14 +11,14 @@ eleventyComputed:
   description: "{{ type.tagline }}"
   ogTitle: "내 SBTI 유형은 {{ type.code }} · {{ type.nameKo }}"
   ogDescription: "{{ type.tagline }}"
-  ogImage: "/img/types/{{ type.code }}.jpg"
+  ogImage: "{{ type.thumbnailPath }}"
 ---
 
 <article class="result-page"
          data-type-code="{{ type.code }}"
          data-type-name-ko="{{ type.nameKo }}"
          data-type-tagline="{{ type.tagline }}"
-         data-og-image="/img/types/{{ type.code }}.jpg">
+         data-og-image="{{ type.thumbnailPath }}">
   <aside class="result-banner" id="result-banner" hidden aria-label="테스트 결과">
     <div class="result-banner-row">
       <span class="result-banner-label" id="banner-label">당신의 결과</span>

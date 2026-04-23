@@ -85,8 +85,14 @@ function accentFor(rarity) {
 
 generateDefaultCard();
 
+// Strip URL-unsafe characters for filename. Must match thumbnailPath
+// sanitization in src/_data/types.json (e.g. WOC! → WOC.jpg).
+function sanitizeForFilename(code) {
+  return code.replace(/[!?#%&]/g, "");
+}
+
 for (const type of TYPES) {
-  const outPath = path.join(OUTPUT_DIR, `${type.code}.jpg`);
+  const outPath = path.join(OUTPUT_DIR, `${sanitizeForFilename(type.code)}.jpg`);
   const bg = backgroundFor(type.rarity);
   const accent = accentFor(type.rarity);
 
